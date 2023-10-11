@@ -169,6 +169,11 @@
       >Insert a new <b>child</b> item</button>
       <div class="dropdown-divider" role="separator"></div>
       <button ngbDropdownItem role="menuitem"
+              (keyup.enter)="onDuplicateItem(myDrop, $event, node)"
+              (click)="onDuplicateItem(myDrop, $event, node)"
+      >Duplicate this item</button>
+      <div class="dropdown-divider" role="separator"></div>
+      <button ngbDropdownItem role="menuitem"
               (keyup.enter)="onMoveDlg($event, node); myDrop.close()"
               (click)="onMoveDlg($event, node)"
       >Move this item ...</button>
